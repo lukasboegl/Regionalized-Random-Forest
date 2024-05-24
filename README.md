@@ -1,4 +1,4 @@
-# Regionalized-Random-Forest
+# Regionalized Random Forest
 
 Practical implementation of master's thesis in Kartographie und Geoinformation at the University of Vienna, supervised by Dr. Ourania Kounadi with the title:
 
