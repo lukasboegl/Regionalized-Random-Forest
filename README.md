@@ -9,8 +9,13 @@ This can be used to arrive at more performant predictions in a spatial context t
 In this example, the analysis was done for the California Housing Dataset which is available [here](https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing).
 The dataset was adapted slightly in order to make the Regionalization algorithms able to run. For further reference please do not hesitate to contact me.
 
-!!!Add 1 sentence for each notebook!!!+
+Notebooks in this repository:
+GWRPRED: Carries out a prediction on the test set using Geographically Weighted Regression
+GRF: Carries out a prediction on the test set using Geographically Weighted Random Forest
+GW-RF-LISA: Evaluation of spatial performance metrics from GRF.
+RF: Carries out a prediction on the test set using Random Forest
 
+RegRF_WARD/AZP/KMEANS/SKATER/MAXP: Carries out a prediction on the test set using Regionalized Random Forest, which is described below:
 
 The abstract of the thesis this repository belongs to is:
 
