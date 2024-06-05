@@ -19,6 +19,6 @@ The workflow for RegRF is schematically visualized in the figure below. It can b
 
 Depending on the regionalization results and the modeling with the training data, this process is repeated until a satisfactory regionalization result is obtained, after that it is used for predicting the test labels from the test features.
 
-Flussdiagr-1.pdf
+![Alt text](Flussdiagr-1.pdf)
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+TEST
