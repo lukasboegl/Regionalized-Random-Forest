@@ -2,12 +2,17 @@
 
 Practical implementation of master's thesis in Kartographie und Geoinformation at the University of Vienna, supervised by Dr. Ourania Kounadi with the title:
 
-"Introducing Spatial Heterogeneity via Regionalization Methodsvin Machine Learning Models for Geographical Prediction: A Spatially Conscious Paradigm."
+"Introducing Spatial Heterogeneity via Regionalization Methods in Machine Learning Models for Geographical Prediction: A Spatially Conscious Paradigm."
+
+This can be used to arrive at more performant predictions in a spatial context than a "casual" Random Forest Reegression Model. In certain scenarios, GWR and GW-RF can be outperformed as well.
+
+In this example, the analysis was done for the California Housing Dataset which is available [here](https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing).
+The dataset was adapted slightly in order to make the Regionalization algorithms able to run. For further reference please do not hesitate to contact me.
 
 
 The workflow for RegRF is schematically visualized in the figure which is linked ![here](Flussdiagr-1.pdf). It can be categorized into five steps:
 
-1. Define parameters and carry out the regionalization procedure on the training data polygons. The choice was made to directly use polygons as the creation of the spatial weights matrix would automatically create voronoi polygons when it is run on point data. Additionally, polygons are necessary for joining the test data points in the following step. As the number of regions to look for needs to be specified for every regionalization method except one, finding the best number is the first challenge that needs to be adressed. As mentioned in section 2.7.6, the plan is to use unsupervised evaluation metrics to assess the result and adapt it if necessary. The result of this is an additional column in the geodataframe which contains the number of the region this observation belongs to.
+1. Define parameters and carry out the regionalization procedure on the training data polygons. The choice was made to directly use polygons as the creation of the spatial weights matrix would automatically create voronoi polygons when it is run on point data. Additionally, polygons are necessary for joining the test data points in the following step. As the number of regions to look for needs to be specified for every regionalization method except one, finding the best number is the first challenge that needs to be adressed. The result of this is an additional column in the geodataframe which contains the number of the region this observation belongs to.
 
 2. Introduction of the test data (points) to the workflow. To find out which region the observations in the test set are part of, a spatial join is carried out, resulting in the same additional column with the region number, which is of course necessary to be able to create a predictive model and evaluate it.
 
