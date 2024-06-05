@@ -18,3 +18,7 @@ The workflow for RegRF is schematically visualized in the figure below. It can b
 5. Predict with the final version, called RegRF_W (Weighted). Here, there are multiple RF models, again one for each region, but with an important distinction: For each region, all of the training data is used, but more weight is put on the samples from the region the forest is currently being created for. More precisely, this means that each "region specific" RF will be based on all the other regions as well, but when training the forest, more data will be taken from that specific region than from other regions. The weight is decided from the number of samples in the region, meaning that for bigger regions, the weight will be bigger. When training the forest like this, all the test points will receive a prediction for each "region specific" model. This means that there are multiple predictions for each row, which is a problem for performance evaluation. This is solved by averaging all the predictions.
 
 Depending on the regionalization results and the modeling with the training data, this process is repeated until a satisfactory regionalization result is obtained, after that it is used for predicting the test labels from the test features.
+
+Flussdiagr-1.pdf
+
+![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
